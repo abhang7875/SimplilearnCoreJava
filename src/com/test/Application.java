@@ -1,5 +1,7 @@
 package com.test;
 
+import java.time.LocalDate;
+
 public class Application {
 	public static void main(String[] args) {
 		Employee e = new Employee(101, "Jim Smith", "11-11-1111", 100_000.00);
@@ -12,5 +14,7 @@ public class Application {
 		Employee e2 = new Manager(101, "John Kern", "12-12-2001", 200_000.00,"Marketing");
 		System.out.println(e1.hashCode()+"\t"+e2.hashCode());
 		System.out.println(e1.equals(e2));
+		
+		System.out.println("Today: "+LocalDate.now());
 	}
 }
