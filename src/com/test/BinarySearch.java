@@ -1,3 +1,4 @@
+package com.test;
 
 public class BinarySearch {
 	public static int binarySearch(int [] arr, int low, int high, int element) {

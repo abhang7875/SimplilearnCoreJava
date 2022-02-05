@@ -1,3 +1,4 @@
+package com.test;
 
 public class ArithmeticCalculator {
 	public int add(int a, int b) {
