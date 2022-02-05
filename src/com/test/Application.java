@@ -8,5 +8,9 @@ public class Application {
 		System.out.println(e.getDetails());
 		System.out.println(m.getDetails());
 		
+		Employee e1 = new Manager(101, "John Kern", "12-12-2001", 200_000.00,"Marketing");
+		Employee e2 = new Manager(101, "John Kern", "12-12-2001", 200_000.00,"Marketing");
+		System.out.println(e1.hashCode()+"\t"+e2.hashCode());
+		System.out.println(e1.equals(e2));
 	}
 }

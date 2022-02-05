@@ -1,5 +1,7 @@
 package com.test;
 
+import java.util.Objects;
+
 public class Employee {
 	private int empID;
 	private String name;
@@ -27,4 +29,22 @@ public class Employee {
 		return "ID: "+this.empID+" Name: "+this.name;
 	}
 	
+	@Override
+	public boolean equals(Object o) {
+		if(o != null && o instanceof Employee) {
+			Employee e = (Employee) o;
+			return e.empID == empID && e.name.equals(name) && e.ssn.equals(ssn) && e.salary == salary;
+		}
+		return false;
+	}
+	
+	@Override
+	public int hashCode() {
+		int hash = 7;
+		hash = 83 * hash + Objects.hashCode(name);
+		hash = 83 * hash + Objects.hashCode(ssn);
+		hash = 83 * hash + empID;
+		hash = 83 * hash + (int) (Double.doubleToLongBits(salary) ^ (Double.doubleToLongBits(salary)>>>3));
+		return hash;
+	}
 }
